@@ -11,7 +11,7 @@
 * ignore 字段在导入导出时忽略，默认为false
 * ignoreImport 字段在导入时忽略，默认为false
 * ignoreExport 字段在导出时忽略，默认为false
-* defaultValue 当值为null时要显示的值 default StringUtils.EMPTY
+* defaultValue 当值为null时要显示的值 default StringUtils.EMPTY  
 **Valid注解说明**  
 用户单元格校验
 * in 必须与in中String相符,目前仅支持String类型 e.g. {"key","value"}
