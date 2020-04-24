@@ -4,6 +4,21 @@
 本ExcelUtil是基于[SargerasWang/ExcelUtil](https://github.com/SargerasWang/ExcelUtil)项目所在的二次版本开发升级
 ***
 # 使用方法
+**ExcelCell注解说明**
+* index 顺序(不是指在Excel中的第几列)
+* ignore 字段在导入导出时忽略，默认为false
+* ignoreImport 字段在导入时忽略，默认为false
+* ignoreExport 字段在导出时忽略，默认为false
+* defaultValue 当值为null时要显示的值 default StringUtils.EMPTY
+**Valid注解说明**
+用户单元格校验
+* in 必须与in中String相符,目前仅支持String类型 e.g. {"key","value"}
+* allowNull 是否允许为空,用于验证数据 默认值 true
+* gt 大于
+* lt 小于
+* ge 大于等于
+* le 小于等于
+
  **数据模型**
 通常可以使用你的数据表bean,当然如果需要导入/导出的字段与数据表差异很大,可以新增bean,当然也可以跳过bean,直接使用Map,下面是示例Bean:
 ```Java  
@@ -87,7 +102,8 @@ public class Model {
     out.close();
   }
   ```
-  **导入**
+  - - - -
+  **导入**  
   ExcelUtil.importExcel 方法的第一个参数,是个Class,如果你有Bean,就写Bean的Class,反之,直接Map.class  
   **XLS 文件**
    ```Java
