@@ -138,3 +138,23 @@ public class Model {
     }
   }
    ```
+---
+ **JXLS 模版导出**
+  ```Java
+	  public void exportTemplate() throws Exception {
+		 Collection<Object> dataset=new ArrayList<Object>();
+	     dataset.add(new Model("张三", 44, "男",new Date()));
+	     dataset.add(new Model("李四", 24, "女",new Date()));
+	     dataset.add(new Model("王五", 34, "男",new Date()));
+	     dataset.add(new Model("陆六", 23, "女",new Date()));
+	     
+		 File tempfile =new File("src/test/resources/testTemplate.xlsx");
+		 InputStream is= new FileInputStream(tempfile);
+		 File outfile= new File("testByTemp.xlsx");
+		 OutputStream out = new FileOutputStream(outfile);
+		 Map<String,Object> map = new HashMap<String,Object>();
+		 map.put("model", dataset);
+		 ExcelUtil.exportExcelByTemplate(is,map,out);
+	 }
+
+    ``` 
