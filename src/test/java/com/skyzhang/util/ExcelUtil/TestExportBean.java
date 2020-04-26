@@ -22,10 +22,10 @@ public class TestExportBean {
         map.put("c","性别");
         map.put("d","出生日期");
         Collection<Object> dataset=new ArrayList<Object>();
-        dataset.add(new Model("", "", "",null));
-        dataset.add(new Model(null, null, null,null));
-        dataset.add(new Model("李四", "24", "女",new Date()));
-        dataset.add(new Model("王五", "34", "男",new Date()));
+        dataset.add(new Model("", 0, "",null));
+        dataset.add(new Model(null, 0, null,null));
+        dataset.add(new Model("李四", 24, "女",new Date()));
+        dataset.add(new Model("王五", 34, "男",new Date()));
         File f=new File("test.xlsx");
         OutputStream out =new FileOutputStream(f);
         

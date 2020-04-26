@@ -17,7 +17,7 @@ public class Model {
     @ExcelCell(index = 0)
     private String a;
     @ExcelCell(index = 1)
-    private String b;
+    private int b;
     @ExcelCell(index = 2)
     private String c;
     @ExcelCell(index = 4, ignore = true)
@@ -35,7 +35,7 @@ public class Model {
     	
     }
 
-    public Model(String a, String b, String c,Date d) {
+    public Model(String a, int b, String c,Date d) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -60,7 +60,7 @@ public class Model {
     /**
      * @return the b
      */
-    public String getB() {
+    public int getB() {
         return b;
     }
 
@@ -68,7 +68,7 @@ public class Model {
      * @param b
      *            the b to set
      */
-    public void setB(String b) {
+    public void setB(int b) {
         this.b = b;
     }
 

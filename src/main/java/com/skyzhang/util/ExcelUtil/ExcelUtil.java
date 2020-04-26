@@ -37,6 +37,10 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.apache.poi.ss.util.CellReference;
 import org.apache.poi.xssf.usermodel.XSSFRichTextString;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.jxls.common.Context;
+import org.jxls.expression.JexlExpressionEvaluator;
+import org.jxls.transform.Transformer;
+import org.jxls.util.JxlsHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -140,6 +144,28 @@ public class ExcelUtil {
 		else
 			return null;
 	}
+	
+	 /** 
+     * 导出excel 
+     * @param tis - excel模版输入流 
+     * @param model - 模版中填充的数据 
+     * @param os - 生成模版输出流 
+     */  
+    public static void exportExcelByTemplate(InputStream tis,Map<String,Object> model,OutputStream os) {  
+         try {  
+        	  Context context = new Context();
+              if (model != null) {
+                  for (String key : model.keySet()) {
+                      context.putVar(key, model.get(key));
+                  }
+              }
+              JxlsHelper jxlsHelper = JxlsHelper.getInstance();
+              Transformer transformer  = jxlsHelper.createTransformer(tis, os);
+              jxlsHelper.processTemplate(context, transformer); 
+        } catch (Exception e) {  
+        	LG.error("export excel error:" + e.toString(), e);  
+        }   
+    }  
 
 	/**
 	 * 利用JAVA的反射机制，将放置在JAVA集合中并且符号一定条件的数据以EXCEL 的形式输出到指定IO设备上<br>
