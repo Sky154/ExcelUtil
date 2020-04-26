@@ -160,6 +160,6 @@ public class Model {
 
     ``` 
  Excel模版
-![Image](https://github.com/Sky154/ExcelUtil/blob/master/image/temp.png)
+![image](https://github.com/Sky154/ExcelUtil/blob/master/image/temp.png)
 导出结果
-![Image](https://github.com/Sky154/ExcelUtil/blob/master/image/export.png)
+![image](https://github.com/Sky154/ExcelUtil/blob/master/image/export.png)
