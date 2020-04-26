@@ -139,7 +139,8 @@ public class Model {
   }
    ```
 ---
- **JXLS 模版导出**
+ **Execl 模版导出**
+ **代码**
   ```Java
 	  public void exportTemplate() throws Exception {
 		 Collection<Object> dataset=new ArrayList<Object>();
@@ -158,3 +159,7 @@ public class Model {
 	 }
 
     ``` 
+ Excel模版
+![Image](https://github.com/Sky154/ExcelUtil/blob/master/image/temp.png)
+导出结果
+![Image](https://github.com/Sky154/ExcelUtil/blob/master/image/export.png)
