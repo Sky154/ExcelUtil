@@ -160,6 +160,6 @@ public class Model {
 
 ``` 
  Excel模版  
-![Excel导出模版](/image/temp.png "Excel导出模版")  
+![Excel导出模版](https://gitee.com/sky154/ExcelUtil/raw/master/image/temp.png "Excel导出模版")  
 导出结果  
-![Excel模版导出结果](/image/export.png "Excel模版导出结果")
+![Excel模版导出结果](https://gitee.com/sky154/ExcelUtil/raw/master/image/export.png "Excel模版导出结果")
